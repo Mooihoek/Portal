@@ -7,14 +7,14 @@ import { Router, RouterEvent } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  about = false;
+  tools = false;
 
   constructor(private router: Router) {
     this.router.events.subscribe((val: RouterEvent) => {
       if (val.url === '/tools') {
-        this.about = true;
+        this.tools = true;
       } else {
-        this.about = false;
+        this.tools = false;
       }
     });
   }

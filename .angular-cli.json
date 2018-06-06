@@ -1,7 +1,7 @@
 {
     "project": {
-        "version": "1.0.0-beta.20-4",
-        "name": "clarity-seed"
+        "version": "1.0.0",
+        "name": "Test1"
     },
     "apps": [
         {
@@ -15,7 +15,7 @@
             "main": "main.ts",
             "test": "test.ts",
             "tsconfig": "tsconfig.json",
-            "prefix": "app",
+            "prefix": "tp",
             "mobile": false,
             "styles": [
                 "../node_modules/@clr/icons/clr-icons.min.css",
@@ -49,6 +49,10 @@
         }
     },
     "defaults": {
+        "serve": {
+          "port": 8443,
+          "host": "0.0.0.0"
+        },    
         "styleExt": "scss",
         "prefixInterfaces": false,
         "inline": {

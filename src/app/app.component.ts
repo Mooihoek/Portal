@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor(private router: Router) {
     this.router.events.subscribe((val: RouterEvent) => {
-      if (val.url === '/about') {
+      if (val.url === '/tools') {
         this.about = true;
       } else {
         this.about = false;

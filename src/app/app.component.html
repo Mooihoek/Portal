@@ -1,18 +1,53 @@
 <clr-main-container>
-  <clr-header>
-    <div class="branding">
-      <a href="#" class="nav-link">
-        <span class="clr-icon clr-clarity-logo"></span>
-        <span class="title">Clarity</span>
+   <clr-header class="header header-7">
+     <div class="branding">
+        <a class="nav-link">
+        <clr-icon shape="vm-bug"></clr-icon>
+        <span class="title">ANZ TAM Portal</span>
       </a>
+     </div>
+     <div class="header-nav">
+         <a href ="home/" class="nav-link nav-icon">
+             <clr-icon shape="home"></clr-icon>
+         </a>
     </div>
-      <div class="header-nav" [clr-nav-level]="1">
-          <a class="nav-link" href="#" [routerLink]="['/home']" routerLinkActive="active"><span class="nav-text">Home</span></a>
+    <div class="header-nav" [clr-nav-level]="1">
+          
+          <a class="nav-link" href="#" [routerLink]="['/dashboards']" routerLinkActive="active"><span class="nav-text">Dashboards</span></a>
+          <a class="nav-link" href="#" [routerLink]="['/tools']" routerLinkActive="active"><span class="nav-text">Tools</span></a>
+          <a class="nav-link" href="#" [routerLink]="['faqs']" routerLinkActive="active"><span class="nav-text">FAQs</span></a>
           <a class="nav-link" href="#" [routerLink]="['/about']" routerLinkActive="active"><span class="nav-text">About</span></a>
-      </div>
+          <a class="nav-link" href="#" [routerLink]="['/test']" routerLinkActive="active"><span class="nav-text">test</span></a>
+        </div>
+        <form class="search">
+            <label for="search_input">
+                <input id="search_input" type="text" placeholder="Search for keywords...">
+            </label>
+        </form>
     <div class="header-actions">
     </div>
-  </clr-header>
+    </clr-header>
+    <nav class="subnav" *ngIf="test">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboards" routerLinkActive="active">Dashboards</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/tools" routerLinkActive="active">Tools</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/faqs" routerLinkActive="active">FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/test" routerLinkActive="active">Test</a>
+        </li>
+      </ul>
+    </nav>
   <div class="content-container">
     <div class="content-area">
       <router-outlet></router-outlet>
